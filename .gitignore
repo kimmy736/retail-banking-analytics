@@ -1,0 +1,41 @@
+# Dữ liệu gốc rất lớn (vài GB) — KHÔNG commit.
+# README ghi rõ lệnh tải để người khác tái tạo được.
+data/bronze/*
+data/silver/*
+data/gold/*
+!data/**/.gitkeep
+
+# Kaggle credentials — tuyệt đối không commit
+kaggle.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Power BI
+# File .pbix PHẢI được commit — nhà tuyển dụng muốn mở ra xem.
+# Nhưng phải giữ dưới ~25MB: chỉ import cột thật sự dùng, tắt Auto date/time.
+# Nếu vượt 100MB thì GitHub sẽ chặn -> lúc đó publish lên Power BI Service
+# và để link + ảnh GIF trong README thay vì cố commit file.
+*.pbix.tmp
+dashboard/*.pbix.bak
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Thư mục giải nén trùng lặp (bản sao của data/bronze)
+archive*/
+
+# Lưu tự động của extension Local History trong VS Code
+.history/
+
+# File nháp và bản backup trong quá trình làm
+sql/nhap.sql
+notebooks/*_v1_cu.ipynb
