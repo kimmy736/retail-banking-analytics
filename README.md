@@ -31,11 +31,20 @@ Trong 215 tài khoản cảnh báo, chỉ **16** thật sự ngừng giao dịch
 
 ## Khuyến nghị
 
-**Không triển khai chiến dịch giữ chân diện rộng cho 215 tài khoản cảnh báo.**
-Tổng số dư của cả nhóm chỉ 5,67 triệu Kč (2,9% danh mục), trong đó 45% nằm ở nhóm dưới 20k. Chi phí chiến dịch nhiều khả năng vượt giá trị bảo vệ được.
+**Không chăm sóc dàn trải cả 215 tài khoản cảnh báo.** Bốn phương án và cái giá của từng phương án:
 
-**Thay vào đó, tập trung vào 28 tài khoản cảnh báo thuộc nhóm 50–100k Kč.**
-Mỗi tài khoản nhóm này nắm trung bình ~69k Kč — gấp 5 lần nhóm dưới 20k. Đây là nơi mỗi đồng chi cho việc giữ chân bảo vệ được nhiều tiền gửi nhất.
+| Phương án | Số tài khoản phải chăm sóc | Tiền bảo vệ được (Kč) | Hiệu quả mỗi tài khoản |
+|---|---:|---:|---:|
+| Chăm sóc toàn bộ | 215 | 5.673.067 | 26.386 |
+| Chỉ nhóm Cao (50–100k) | 28 | 1.798.724 | **64.240** |
+| **Nhóm Cao + Trung bình** | **119** | **4.582.974** | **38.512** |
+| Chỉ nhóm Thấp (<20k) | 96 | 1.090.093 | 11.355 |
+
+**Đề xuất: tập trung vào 119 tài khoản thuộc hai nhóm giá trị cao nhất.**
+Chiếm 55% khối lượng công việc nhưng bảo vệ được **81% số tiền đang rủi ro**.
+
+**Bỏ hẳn 96 tài khoản nhóm dưới 20k.**
+Chúng chiếm 45% khối lượng nhưng chỉ nắm 19% số tiền. Mỗi tài khoản trung bình 11.355 Kč — bằng một phần sáu nhóm cao. Nếu chi phí chăm sóc một khách vượt 11 nghìn Kč thì việc liên hệ nhóm này **lỗ**.
 
 **Ưu tiên 199 tài khoản "số dư giảm nhưng vẫn giao dịch" trước 16 tài khoản đã im lặng.**
 Nhóm thứ nhất vẫn còn tương tác với ngân hàng nên còn liên lạc được và chi phí giữ chân thấp. Nhóm thứ hai đã ngừng giao dịch từ 6 tháng trở lên, chi phí kéo về cao hơn nhiều.
@@ -46,7 +55,6 @@ Nhóm thứ nhất vẫn còn tương tác với ngân hàng nên còn liên l�
 
 ## Dashboard
 
-<!-- Chụp ở chế độ Full screen (Ctrl+F11) rồi lưu vào images/ -->
 
 ![Tổng quan danh mục](images/trang1_tong_quan.png)
 
