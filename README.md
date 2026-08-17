@@ -177,6 +177,15 @@ Tám vấn đề được phát hiện qua profiling, mỗi vấn đề có bằ
 | 7 | `k_symbol` có hai kiểu rỗng | `NaN` 481.881 dòng và chuỗi khoảng trắng 53.433 dòng | `NULLIF(TRIM(...), '')` | `IS NOT NULL` không bắt được chuỗi rỗng |
 | 8 | Số dư âm | 2.999 dòng, 288 tài khoản, thấp nhất −41.125 Kč | **Giữ nguyên** | Đây là thấu chi — tín hiệu nghiệp vụ thật, không phải lỗi. Lọc bỏ là xoá mất nhóm khách rủi ro nhất |
 
+### Các cột đã loại bỏ
+
+Ngoài tám vấn đề trên, một số cột bị loại khỏi tầng silver vì nằm ngoài phạm vi phân tích:
+
+| Cột | Bảng | Lý do loại |
+|---|---|---|
+| `A5`–`A8` | `district` | Số xã chia theo quy mô dân số — không dùng cho câu hỏi nào của project |
+| `bank`, `account` | `trans` | Ngân hàng và tài khoản đối tác, chỉ có giá trị ở giao dịch chuyển khoản (rỗng 74% và 72%). Đây cũng là **NULL có cấu trúc** — rút hay nộp tiền mặt thì không có đối tác. Xem mục Hướng phát triển: hai cột này đáng khai thác ở giai đoạn sau |
+
 Ba nguyên tắc rút ra:
 
 - **Không phải giá trị bất thường nào cũng là lỗi.** Số dư âm là nghiệp vụ.
@@ -251,6 +260,7 @@ Tách hai lớp tên như vậy là cách làm chuẩn: lớp kỹ thuật theo 
 
 ## Hướng phát triển
 
+- **Tiền chảy đi đâu:** bảng `trans` có cột ghi **ngân hàng đối tác** cho 273.508 giao dịch chuyển khoản, thuộc 13 ngân hàng. Cột này đã bị loại ở tầng silver vì ngoài phạm vi ban đầu, nhưng nó trả lời được câu hỏi mà dashboard hiện đang bỏ trống: trong 199 khách có số dư giảm dần, tiền của họ chảy về đâu. Nếu tập trung vào một đối thủ cụ thể thì đây không còn là "khách rời bỏ" chung chung mà là **mất thị phần vào tay một đối thủ xác định** — một kết luận hành động được ngay.
 - **Phân tích bán chéo:** 892/4.500 tài khoản có thẻ (19,8%), 682 có vay (15,2%). Cắt chéo với nhóm giá trị tài khoản sẽ ra danh sách khách số dư cao chưa có thẻ — mục tiêu chào bán rõ ràng.
 - **Phân tích cohort:** so sánh hành vi các lứa khách mở tài khoản theo năm.
 - **Mô hình dự báo rời bỏ:** cần dữ liệu nhiều khoản vay hơn và nhãn rời bỏ thật.
