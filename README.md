@@ -27,6 +27,20 @@ Trong 215 tài khoản cảnh báo, chỉ **16** thật sự ngừng giao dịch
 **4. Tiền gửi tập trung mạnh.**
 1.627 tài khoản (36% số lượng) nắm giữ **117,6 triệu Kč — 59,7% tổng tiền gửi**.
 
+**5. Tháng 1 là tháng duy nhất trong năm có dòng tiền ròng âm.**
+Trung bình **−15,3 triệu Kč**, trong khi tháng 2 là **+11,2 triệu**. Nguyên nhân không phải khách rút tiền hàng loạt: tiền vào tháng 1 vẫn bình thường, nhưng **tiền ra tăng 31% và số giao dịch tăng 54%** — dấu hiệu của rất nhiều khoản chi nhỏ cùng đến hạn (bảo hiểm, hoá đơn sinh hoạt qua hệ thống SIPO), không phải vài khoản rút lớn.
+
+Giá trị nghiệp vụ: ngân hàng biết trước tháng 1 sẽ hụt thanh khoản thì chuẩn bị được nguồn.
+
+**6. Lịch sử bị phạt lãi dự báo rủi ro rời bỏ tốt hơn thâm niên.**
+
+| Nhóm | Tỷ lệ từng bị phạt lãi | Thâm niên trung bình |
+|---|---:|---:|
+| Hoạt động bình thường | 5,6% | 40,2 tháng |
+| **Có dấu hiệu rời bỏ** | **12,1%** | 40,6 tháng |
+
+Tỷ lệ bị phạt **gấp 2,2 lần**, trong khi thâm niên gần như không khác biệt. Nghĩa là "khách gắn bó lâu thì ít rời đi" — giả định thường gặp — **không đúng với danh mục này**. Tín hiệu đáng theo dõi là **hành vi tài chính**, không phải thời gian gắn bó.
+
 ---
 
 ## Khuyến nghị
@@ -201,6 +215,8 @@ Nguyên nhân là **nguỵ biện sinh thái**: lương trung bình giữa các 
 **Không phân tích rủi ro tín dụng.** Bảng `loan` chỉ có 682 khoản, trong đó 234 khoản đã kết thúc và 31 khoản vỡ nợ — quá ít để kết luận có ý nghĩa thống kê.
 
 **Mất thông tin người được uỷ quyền.** Việc lọc `disp.type = 'OWNER'` loại bỏ 869 người dùng phụ. Đánh đổi có chủ ý: project phân tích ở cấp chủ tài khoản.
+
+**Không có tài khoản nào mở trong năm 1998.** Tài khoản cuối cùng trong dữ liệu mở ngày 29/12/1997, trong khi giao dịch vẫn kéo dài hết 1998. Nhiều khả năng là giới hạn của quá trình thu thập dữ liệu, không phải ngân hàng ngừng nhận khách mới. Vì vậy biểu đồ "tài khoản mở mới theo năm" chỉ có 5 năm thay vì 6.
 
 **Dữ liệu thập niên 1990.** Không phản ánh hành vi ngân hàng số, ví điện tử, hay thanh toán không tiếp xúc.
 
